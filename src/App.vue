@@ -8,13 +8,25 @@
 <script>
 import { defineComponent } from "vue";
 import { useI18n } from "vue-i18n";
+import { useAuth0 } from "./auth";
+import { onMounted } from "vue";
 
 export default defineComponent({
   name: "App",
   setup() {
     const { t } = useI18n({ useScope: "global" }); // call `useI18n`, and spread `t` from  `useI18n` returning
+    const auth0 = useAuth0();
 
-    return { t }; // return render context that included `t`
+    onMounted(async () => {
+      if (!auth0) {
+        return;
+      }
+
+      await auth0.createClient();
+      await auth0.handleCallback();
+    });
+
+    return { t, auth0 }; // return render context that included `t`
   },
 });
 </script>

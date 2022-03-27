@@ -10,6 +10,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@auth0/auth0-spa-js": "^1.20.1",
     "@headlessui/vue": "^1.5.0",
     "@heroicons/vue": "^1.0.6",
     "axios": "^0.26.1",

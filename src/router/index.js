@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import LoginView from "@/views/authentication/LoginView";
 import appRoutes from "./appRoutes";
 import ApplicationLayout from "@/layouts/ApplicationLayout";
+import NotFound from "@/views/NotFound";
 
 const routes = [
   {
@@ -39,6 +40,11 @@ const routes = [
       layout: "none",
       requiresAuth: true,
     },
+  },
+  {
+    path: "/:catchAll(.*)",
+    name: "Not Found",
+    component: NotFound,
   },
 ];
 
