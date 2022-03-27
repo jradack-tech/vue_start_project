@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import LoginView from "@/views/authentication/LoginView";
+import DashboardView from "@/views/application/DashboardView";
 
 const routes = [
   {
@@ -15,6 +17,23 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: LoginView,
+    meta: {
+      layout: "ApplicationLayout",
+    },
+  },
+  {
+    path: "/dashboard",
+    name: "dashboard",
+    component: DashboardView,
+    meta: {
+      requiresAuth: true,
+      layout: "ApplicationLayout",
+    },
   },
 ];
 

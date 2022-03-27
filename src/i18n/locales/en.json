@@ -1,0 +1,12 @@
+{
+  "application": {
+    "name": "Demo Application",
+    "tag": "Basic setup to get a solid Vue 3 application off the ground"
+  },
+  "menu": {
+    "about": "About",
+    "dashboard": "Dashboard",
+    "home": "Home",
+    "register": "Register"
+  }
+}

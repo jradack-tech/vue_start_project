@@ -1,11 +1,23 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <div id="app">
+    <AppLayout>
+      <router-view />
+    </AppLayout>
+  </div>
 </template>
+<script>
+import { defineComponent } from "vue";
+import { useI18n } from "vue-i18n";
 
+export default defineComponent({
+  name: "App",
+  setup() {
+    const { t } = useI18n({ useScope: "global" }); // call `useI18n`, and spread `t` from  `useI18n` returning
+
+    return { t }; // return render context that included `t`
+  },
+});
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

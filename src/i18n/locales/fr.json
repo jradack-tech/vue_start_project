@@ -1,0 +1,12 @@
+{
+  "application": {
+    "name": "Demo Application",
+    "tag": "Application de base pour lancer rapidement une application Vue 3"
+  },
+  "menu": {
+    "about": "A Propos",
+    "dashboard": "Tableau de bord",
+    "home": "Accueil",
+    "register": "Inscription"
+  }
+}
