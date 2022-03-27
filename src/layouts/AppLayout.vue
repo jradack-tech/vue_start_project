@@ -6,6 +6,7 @@
 
 <script>
 import AppLayoutDefault from "./AppLayoutDefault";
+import EmptyLayout from "./EmptyLayout";
 import { shallowRef, watch } from "vue";
 import { useRoute } from "vue-router";
 
@@ -17,11 +18,15 @@ export default {
     watch(
       () => route.meta,
       async (meta) => {
-        try {
-          const component = await require(`@/layouts/${meta.layout}.vue`);
-          layout.value = component?.default || AppLayoutDefault;
-        } catch (e) {
-          layout.value = AppLayoutDefault;
+        if (route.meta.layout !== "none") {
+          try {
+            const component = await require(`@/layouts/${meta.layout}.vue`);
+            layout.value = component?.default || AppLayoutDefault;
+          } catch (e) {
+            layout.value = AppLayoutDefault;
+          }
+        } else {
+          layout.value = EmptyLayout;
         }
       }
     );

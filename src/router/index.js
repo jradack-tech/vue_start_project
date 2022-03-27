@@ -1,13 +1,17 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import LoginView from "@/views/authentication/LoginView";
-import DashboardView from "@/views/application/DashboardView";
+import appRoutes from "./appRoutes";
+import ApplicationLayout from "@/layouts/ApplicationLayout";
 
 const routes = [
   {
     path: "/",
     name: "home",
     component: HomeView,
+    meta: {
+      layout: "MarketingLayout",
+    },
   },
   {
     path: "/about",
@@ -27,12 +31,13 @@ const routes = [
     },
   },
   {
-    path: "/dashboard",
-    name: "dashboard",
-    component: DashboardView,
+    name: "Application",
+    path: "/app",
+    component: ApplicationLayout,
+    children: [...appRoutes],
     meta: {
+      layout: "none",
       requiresAuth: true,
-      layout: "ApplicationLayout",
     },
   },
 ];

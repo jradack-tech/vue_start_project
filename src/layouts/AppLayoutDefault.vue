@@ -1,13 +1,13 @@
 <template>
   <div>
-    <nav>
-      <router-link to="/">{{ $t("menu.home") }}</router-link> |
-      <router-link to="/about">{{ $t("menu.about") }}</router-link> |
-      <router-link to="/register">{{ $t("menu.register") }}</router-link> |
-      <router-link to="/dashboard">{{ $t("menu.dashboard") }}</router-link>
-    </nav>
-
+    <MainMenu />
     <h1>Default Layout</h1>
-    <slot />
+    <router-view></router-view>
   </div>
 </template>
+<script>
+import MainMenu from "@/components/menus/MainMenu";
+export default {
+  components: { MainMenu },
+};
+</script>
