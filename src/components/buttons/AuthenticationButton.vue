@@ -19,7 +19,6 @@ export default {
 
     const isAuthenticated = computed(() => {
       if (!auth0) {
-        console.log("SHIT");
         return null;
       }
 

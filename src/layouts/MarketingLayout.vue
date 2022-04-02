@@ -1,13 +1,13 @@
 <template>
   <div>
-    <MainMenu />
+    <MarketingNavBar />
     <h1>Marketing Layout</h1>
     <router-view></router-view>
   </div>
 </template>
 <script>
-import MainMenu from "@/components/menus/MainMenu";
+import MarketingNavBar from "@/components/navbars/MarketingNavBar";
 export default {
-  components: { MainMenu },
+  components: { MarketingNavBar },
 };
 </script>

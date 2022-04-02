@@ -7,6 +7,11 @@
     "about": "About",
     "dashboard": "Dashboard",
     "home": "Home",
-    "register": "Register"
+    "login": "Login",
+    "logout": "Logout",
+    "notifications": "View Notifications",
+    "profile": "Profile",
+    "signup": "Sign Up",
+    "user": "User Menu"
   }
 }
