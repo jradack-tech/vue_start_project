@@ -15,7 +15,7 @@
       <div class="lg:pr-8">
         <div class="max-w-md mx-auto sm:max-w-lg lg:mx-0">
           <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
-            {{ $t("about.title") }}
+            {{ $t("about.header") }}
           </h2>
           <p class="mt-4 text-lg text-gray-500 sm:mt-3">
             {{ $t("about.description") }}

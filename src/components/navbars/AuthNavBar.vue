@@ -1,8 +1,8 @@
 <template>
   <div class="flex items-center">
     <div v-if="!isAuthenticated && !isLoading" class="flex-shrink-0">
-      <LoginButton />
-      <SignupButton />
+      <LoginButton :locale="this.$i18n.locale" />
+      <SignupButton :locale="this.$i18n.locale" />
     </div>
     <LocaleButton />
     <div

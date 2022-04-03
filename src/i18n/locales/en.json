@@ -25,11 +25,23 @@
     "submit": "Submit"
   },
   "about": {
-    "title": "Let's work together",
+    "header": "Let's work together",
     "description": "We’d love to hear from you! Send us a message by filling up this form.",
     "form": {
       "help": "How can we help you?",
       "hear": "How did you hear about us?"
     }
+  },
+  "comingSoon": {
+    "comingSoon": "Coming soon",
+    "header1": "Data to enrich your",
+    "header2": "online business",
+    "description": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.",
+    "signup": "Sign up to get notified when it’s ready.",
+    "email": "Enter your email",
+    "notifyMe": "Notify me",
+    "care": "We care about the protection of your data. Read our",
+    "privacyPolicy": "Privacy Policy",
+    "video": "Watch our video to learn more"
   }
 }

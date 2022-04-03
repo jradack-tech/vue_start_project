@@ -24,17 +24,22 @@ import { DisclosureButton } from "@headlessui/vue";
 export default {
   name: "LoginButton",
   components: { DisclosureButton },
-  props: { mobile: { type: Boolean, default: false } },
-
-  setup() {
+  props: {
+    mobile: { type: Boolean, default: false },
+    locale: { type: String, default: "en" },
+  },
+  setup(props) {
     const auth0 = useAuth0();
 
     const login = () => {
       if (!auth0) {
         return;
       }
-
-      auth0.login();
+      var locale = props.locale;
+      if (locale === "fr") {
+        locale = "fr-CA";
+      }
+      auth0.login({ ui_locales: locale });
     };
 
     return {
