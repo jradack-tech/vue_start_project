@@ -9,9 +9,12 @@
     "home": "Home",
     "login": "Login",
     "logout": "Logout",
-    "notifications": "View Notifications",
+    "notifications": "Notifications",
     "profile": "Profile",
+    "recent": "Recent",
+    "settings": "Settings",
     "signup": "Sign Up",
+    "tasks": "My Tasks",
     "user": "User Menu"
   },
   "form": {
