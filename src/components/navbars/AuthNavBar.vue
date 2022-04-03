@@ -4,13 +4,14 @@
       <LoginButton />
       <SignupButton />
     </div>
+    <LocaleButton />
     <div
       v-if="user"
       class="hidden md:ml-4 md:flex-shrink-0 md:flex md:items-center"
     >
       <NotificationsButton />
       <!-- Profile dropdown -->
-      <Menu as="div" class="ml-3 relative">
+      <Menu as="div" class="ml-3 relative z-50">
         <div>
           <MenuButton
             class="bg-white rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -76,10 +77,12 @@ import { computed } from "vue";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/vue";
 import NotificationsButton from "@/components/buttons/NotificationsButton";
 import SignupButton from "@/components/buttons/SignUpButton";
+import LocaleButton from "@/components/buttons/LocaleButton";
 
 export default {
   name: "AuthNavBar",
   components: {
+    LocaleButton,
     SignupButton,
     NotificationsButton,
     LoginButton,

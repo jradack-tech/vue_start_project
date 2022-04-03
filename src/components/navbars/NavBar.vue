@@ -16,9 +16,13 @@
           </div>
           <NavLogo />
           <div class="hidden md:ml-6 md:flex md:space-x-8">
-            <NavBarButton label="menu.home" to="/" />
-            <NavBarButton label="menu.about" to="/about" />
-            <NavBarButton label="menu.dashboard" to="/app/dashboard" />
+            <NavBarButton v-if="isMarketing" label="menu.home" to="/" />
+            <NavBarButton v-if="isMarketing" label="menu.about" to="/about" />
+            <NavBarButton
+              v-if="isApplication"
+              label="menu.dashboard"
+              to="/app/dashboard"
+            />
           </div>
         </div>
         <AuthNavBar />
@@ -27,9 +31,13 @@
 
     <DisclosurePanel class="md:hidden">
       <div class="pt-2 pb-3 space-y-1">
-        <MobileNavBarButton label="menu.home" to="/" />
-        <MobileNavBarButton label="menu.about" to="/about" />
-        <MobileNavBarButton label="menu.dashboard" to="/app/dashboard" />
+        <MobileNavBarButton v-if="isMarketing" label="menu.home" to="/" />
+        <MobileNavBarButton v-if="isMarketing" label="menu.about" to="/about" />
+        <MobileNavBarButton
+          v-if="isApplication"
+          label="menu.dashboard"
+          to="/app/dashboard"
+        />
       </div>
       <MobileAuthNavBar />
     </DisclosurePanel>
@@ -46,7 +54,17 @@ import MobileAuthNavBar from "@/components/navbars/MobileAuthNavBar";
 import NavLogo from "@/components/navbars/NavLogo";
 
 export default {
-  name: "MarketingNavBar",
+  name: "NavBar",
+  props: { mode: { type: String, default: "marketing" } },
+  computed: {
+    isMarketing() {
+      return this.mode === "marketing";
+    },
+    isApplication() {
+      return this.mode === "application";
+    },
+  },
+
   components: {
     NavLogo,
     AuthNavBar,

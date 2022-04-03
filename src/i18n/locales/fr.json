@@ -7,6 +7,29 @@
     "about": "A Propos",
     "dashboard": "Tableau de bord",
     "home": "Accueil",
-    "register": "Inscription"
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "notifications": "Voir alertes",
+    "profile": "Profile",
+    "signup": "Inscription",
+    "user": "Menu Utilisateur"
+  },
+  "form": {
+    "company": "Compagnie",
+    "email": "Courriel",
+    "firstName": "Prénom",
+    "lastName": "Nom de famille",
+    "maxChars": "{number} caractères max",
+    "optional": "Optionnel",
+    "phone": "Téléphone",
+    "submit": "Soumettre"
+  },
+  "about": {
+    "title": "Travaillons ensemble",
+    "description": "Nous aimerions entendre parler de vous! Laissez-nous un message en remplissant ce formulaire",
+    "form": {
+      "help": "Comment pouvons-nous vous aider?",
+      "hear": "Comment avez-vous entendu parler de nous?"
+    }
   }
 }

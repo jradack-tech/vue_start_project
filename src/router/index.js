@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import LoginView from "@/views/authentication/LoginView";
 import appRoutes from "./appRoutes";
 import ApplicationLayout from "@/layouts/ApplicationLayout";
 import NotFound from "@/views/NotFound";
+import { authenticationGuard } from "@/auth/authentication-guard";
 
 const routes = [
   {
@@ -27,22 +27,14 @@ const routes = [
     },
   },
   {
-    path: "/login",
-    name: "login",
-    component: LoginView,
-    meta: {
-      layout: "ApplicationLayout",
-    },
-  },
-  {
     name: "Application",
     path: "/app",
     component: ApplicationLayout,
     children: [...appRoutes],
     meta: {
       layout: "none",
-      requiresAuth: true,
     },
+    beforeEnter: authenticationGuard,
   },
   {
     path: "/:catchAll(.*)",

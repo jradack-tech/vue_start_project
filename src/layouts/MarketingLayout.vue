@@ -1,13 +1,12 @@
 <template>
   <div>
-    <MarketingNavBar />
-    <h1>Marketing Layout</h1>
+    <NavBar mode="marketing" />
     <router-view></router-view>
   </div>
 </template>
 <script>
-import MarketingNavBar from "@/components/navbars/MarketingNavBar";
+import NavBar from "@/components/navbars/NavBar";
 export default {
-  components: { MarketingNavBar },
+  components: { NavBar },
 };
 </script>

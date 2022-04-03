@@ -13,5 +13,23 @@
     "profile": "Profile",
     "signup": "Sign Up",
     "user": "User Menu"
+  },
+  "form": {
+    "company": "Company",
+    "email": "Email",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "maxChars": "Max. {number} characters",
+    "optional": "Optional",
+    "phone": "Phone",
+    "submit": "Submit"
+  },
+  "about": {
+    "title": "Let's work together",
+    "description": "We’d love to hear from you! Send us a message by filling up this form.",
+    "form": {
+      "help": "How can we help you?",
+      "hear": "How did you hear about us?"
+    }
   }
 }

@@ -1,10 +1,12 @@
 <template>
   <div>
-    <p class="headline">{{ $t("ProfileView.headline") }}</p>
+    <p class="headline">{{ user }}</p>
   </div>
 </template>
 
 <script>
+import { useAuth0 } from "@/auth";
+
 export default {
   name: "ProfileView",
   head() {
@@ -19,14 +21,16 @@ export default {
       ],
     };
   },
+  setup() {
+    const auth0 = useAuth0();
+
+    const user = auth0 ? auth0.user : null;
+
+    return {
+      user,
+    };
+  },
 };
 </script>
 
-<style scoped>
-.fullwidth {
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 0;
-  padding-right: 0;
-}
-</style>
+<style scoped></style>

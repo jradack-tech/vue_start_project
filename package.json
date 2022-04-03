@@ -13,6 +13,7 @@
     "@auth0/auth0-spa-js": "^1.20.1",
     "@headlessui/vue": "^1.5.0",
     "@heroicons/vue": "^1.0.6",
+    "@tailwindcss/forms": "^0.5.0",
     "axios": "^0.26.1",
     "core-js": "^3.8.3",
     "register-service-worker": "^1.7.2",
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@intlify/vue-i18n-loader": "^4.1.0",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-e2e-cypress": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
